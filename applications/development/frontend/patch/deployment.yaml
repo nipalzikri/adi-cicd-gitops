@@ -9,4 +9,4 @@ spec:
     spec:
       containers:
       - name: app
-        image: frontend:9
+        image: frontend:10
