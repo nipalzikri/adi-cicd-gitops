@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: frontend:1
+          image: frontend:8
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
