@@ -8,8 +8,6 @@ spec:
     - name: course-gateway
       sectionName: http
       namespace: argocd
-  hostnames:
-    - "localhost"
   rules:
     - matches:
         - path:
