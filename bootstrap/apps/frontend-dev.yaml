@@ -1,0 +1,21 @@
+# Child Application: frontend (development)
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: frontend-dev
+  namespace: argocd
+spec:
+  project: course
+  source:
+    repoURL: "https://github.com/nipalzikri/adi-cicd-gitops.git"
+    targetRevision: HEAD
+    path: applications/development/frontend
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: frontend-development
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

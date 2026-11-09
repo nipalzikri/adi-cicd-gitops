@@ -1,0 +1,12 @@
+# Deployment patch — target update image otomatis dari Jenkins CI
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: frontend-development
+spec:
+  template:
+    spec:
+      containers:
+      - name: app
+        image: frontend:1

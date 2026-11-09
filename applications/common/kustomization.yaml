@@ -1,0 +1,7 @@
+# Common base — shared resources untuk semua microservice (DRY).
+resources:
+- deployment.yaml
+- patch/hpa.yaml
+- patch/pdb.yaml
+- patch/service.yaml
+- service-account.yaml
